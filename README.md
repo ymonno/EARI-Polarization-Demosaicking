@@ -1,5 +1,5 @@
 # EARI Monochrome and Color Polarization Demosaicking Codes
-This is the source code of our proposed edge-aware residual interpolation (EARI) for monochrome and color polarization demosaicking [Project](http://www.ok.sc.e.titech.ac.jp/res/PolarDem/index.html){:target="_blank"}.
+This is the source code of our proposed edge-aware residual interpolation (EARI) for monochrome and color polarization demosaicking <a href="http://www.ok.sc.e.titech.ac.jp/res/PolarDem/index.html" target="_blank">[Project]</a>.
 
 ## Reference
 "Monochrome and Color Polarization Demosaicking Using Edge-Aware Residual Interpolation"<br>
