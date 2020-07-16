@@ -27,6 +27,9 @@ Demosaicked RGB images for each polarization direction: Dem_0, Dem_45, Dem_90, D
 Stokes parameter images derived from the demosaicked RGB images: Dem_S0, Dem_S1, Dem_S2, Dem_DoP, Dem_AoP<br>
 CSV file containing PSNR values and angle RMSE for Table 2 in the paper
 
+## Dataset
+Our 12-channel full color-polarization dataset is downloadable from our project page <a href="http://www.ok.sc.e.titech.ac.jp/res/PolarDem/index.html" target="_blank">[Project]</a>.
+
 ## Reference
 The code is available only for research purpose. If you use this code for publications, please cite the following paper.<br>
 
