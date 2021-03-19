@@ -18,6 +18,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function  rgb_dem = demosaick(rgb, pattern, sigma, eps)
 
+rgb = rgb*255;
+
 % mosaic and mask
 [mosaic mask] = mosaic_bayer(rgb, pattern);
 
@@ -32,8 +34,8 @@ red = clip(red,0,255);
 blue = clip(blue,0,255);
 
 % result image
-rgb_dem(:,:,1) = red;
-rgb_dem(:,:,2) = green;
-rgb_dem(:,:,3) = blue;
+rgb_dem(:,:,1) = red/255;
+rgb_dem(:,:,2) = green/255;
+rgb_dem(:,:,3) = blue/255;
 
 end
