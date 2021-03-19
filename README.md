@@ -1,6 +1,9 @@
 # EARI Polarization Demosaicking Codes
 This is the source code of our proposed edge-aware residual interpolation (EARI) for monochrome and color polarization demosaicking <a href="http://www.ok.sc.e.titech.ac.jp/res/PolarDem/index.html" target="_blank">[Project]</a>.
 
+## Note on Paper Result Reproduction (March 19, 2021)
+We found that we originally uploaded an incorrect file for color demosaicking. Thus, we re-uploaded a correct file that can reproduce our paper results for color polarization demosaicking. We are sorry for any inconvenience this may occur. To reproduce our paper results, please use [0, 1]-normalized MAT file as the input, because the parameters are set based on [0, 1]-range data.
+
 ## Demo
 
 ### - sample_download.m
@@ -38,4 +41,4 @@ The code is available only for research purpose. If you use this code for public
 
 "Monochrome and Color Polarization Demosaicking Using Edge-Aware Residual Interpolation"<br>
 Miki Morimatsu, Yusuke Monno, Masayuki Tanaka, and Masatoshi Okutomi,<br>
-IEEE International Conference on Image Processing (ICIP), October, 2020 (To appear).
+IEEE International Conference on Image Processing (ICIP), pp.2571-2575, October, 2020.
