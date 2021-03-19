@@ -36,7 +36,7 @@ function dst = within01( src )
  d = ( dst < 0 );
  while( sum(d(:)) > 0 )
   dst = dst + d;
-  d = ( dst < 1 );
+  d = ( dst < 0 );
  end
 
 end
