@@ -5,7 +5,7 @@ This is the source code of our proposed interpolation-based monochrome and color
 To reproduce our paper results, please use [0, 1]-normalized MAT file as the input, because the parameters are set based on [0, 1]-range data.
 
 ## Included IGRI2 Method (July 11, 2024)
-We have included the IGRI2 method in our IEEE Sensors Journal paper, proposed in addition to the EARI (IGRI1) method proposed in our ICIP2020 paper. Please select the methods as method=1 for EARI and method=2 for IGRI2 at the first part of each demo code.   
+We have included the IGRI2 method proposed in our IEEE Sensors Journal paper, in addition to the EARI (IGRI1) method proposed in our ICIP2020 paper. Please select the methods as method=1 for EARI and method=2 for IGRI2 at the first part of each demo code.   
 
 ## Demo
 
