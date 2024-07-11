@@ -1,8 +1,16 @@
 clear;
 
+%% method selection
+method = 1; %EARI(IGRI1)
+% method = 2; %IGRI2
+
 %% Settings
 addpath(genpath('Functions'));
-filename = sprintf('EARI');
+if method == 1
+    filename = sprintf('EARI');
+elseif method == 2
+    filename = sprintf('IGRI2');
+end
 
 % Result folder
 if exist('Results_monochrome') == 0
@@ -65,7 +73,11 @@ MPFA(2:2:end,1:2:end,:) = I_135(2:2:end,1:2:end);
 MPFA(2:2:end,2:2:end,:) = I_0(2:2:end,2:2:end);   
 
 % Polarization demosaicking
-[Dem_0, Dem_45, Dem_90, Dem_135] = EARI(MPFA,eps,mask_P0,mask_P45,mask_P90,mask_P135);
+if method == 1
+    [Dem_0, Dem_45, Dem_90, Dem_135] = EARI(BayerDem_RGB,eps,mask_P0,mask_P45,mask_P90,mask_P135);
+elseif method == 2
+    [Dem_0, Dem_45, Dem_90, Dem_135] = IGRI2(BayerDem_RGB,eps,mask_P0,mask_P45,mask_P90,mask_P135);
+end
 
 
 %% Calculate stokes parameters
