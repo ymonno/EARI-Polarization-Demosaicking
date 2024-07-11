@@ -1,11 +1,11 @@
 # EARI and IGRI Polarization Demosaicking Codes
-This is the source code of our proposed interpolation-based monochrome and color polarization demosaicking methods, EARI(IGRI1) and IGRI2. <a href="http://www.ok.sc.e.titech.ac.jp/res/PolarDem/main.html" target="_blank">[Project]</a>.
+This is the source code of our proposed interpolation-based monochrome and color polarization demosaicking methods, EARI (IGRI1) and IGRI2. <a href="http://www.ok.sc.e.titech.ac.jp/res/PolarDem/main.html" target="_blank">[Project]</a>.
 
 ## Note on Paper Result Reproduction (March 19, 2021)
 To reproduce our paper results, please use [0, 1]-normalized MAT file as the input, because the parameters are set based on [0, 1]-range data.
 
 ## Included IGRI2 Method (July 11, 2024)
-We have included the IGRI2 method in our IEEE Sensors Journal paper, in addition to the EARI(IGRI1) method proposed in our ICIP2020 paper. Please select the methods as method=1 for EARI and method=2 for IGRI2 at the first part of each demo code.   
+We have included the IGRI2 method in our IEEE Sensors Journal paper, proposed in addition to the EARI (IGRI1) method proposed in our ICIP2020 paper. Please select the methods as method=1 for EARI and method=2 for IGRI2 at the first part of each demo code.   
 
 ## Demo
 
