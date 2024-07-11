@@ -1,9 +1,18 @@
 clear;
 tic
 
+%% method selection
+method = 1; %EARI(IGRI1)
+% method = 2; %IGRI2
+
+
 %% settings
 addpath(genpath('Functions'));
-filename = sprintf('EARI');
+if method == 1
+    filename = sprintf('EARI');
+elseif method == 2
+    filename = sprintf('IGRI2');
+end
 
 % Result folder
 if exist('Results_color') == 0
@@ -102,7 +111,6 @@ B_0 = mask_B0 .* RGB_0(:,:,3);
 PCFA = R_90 + R_45 + R_135 + R_0 + G_90 + G_45 + G_135 + G_0...
     + B_90 + B_45 + B_135 + B_0;
 
-
 % make Bayer polarization images
 Bayer_90 = PCFA(1:2:end,1:2:end);
 Bayer_45 = PCFA(1:2:end,2:2:end);
@@ -126,7 +134,11 @@ BayerDem_RGB(2:2:end,1:2:end,:) = BayerDem_135;
 BayerDem_RGB(2:2:end,2:2:end,:) = BayerDem_0;   
 
 % Polarization demosaicking
-[Dem_0, Dem_45, Dem_90, Dem_135] = EARI(BayerDem_RGB,eps,mask_P0,mask_P45,mask_P90,mask_P135);
+if method == 1
+    [Dem_0, Dem_45, Dem_90, Dem_135] = EARI(BayerDem_RGB,eps,mask_P0,mask_P45,mask_P90,mask_P135);
+elseif method == 2
+    [Dem_0, Dem_45, Dem_90, Dem_135] = IGRI2(BayerDem_RGB,eps,mask_P0,mask_P45,mask_P90,mask_P135);
+end
 
 
 %% Calculate stokes
@@ -179,4 +191,3 @@ angleerror = angleerror_AOLP(AoP,Dem_AoP,15);
 
 result = [cpsnr_0,cpsnr_45,cpsnr_90,cpsnr_135,cpsnr_S0,cpsnr_S1,cpsnr_S2,cpsnr_DOLP,angleerror];
 csvwrite('Results_color/color.csv',result)
-
