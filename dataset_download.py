@@ -39,7 +39,7 @@ def sample_download(path_to_dataset=None, download_only=False):
         for mat_file in mat_files:
             title = os.path.basename(mat_file).split('.', 1)[0]
             print(f" {title}")
-            pth_file = os.path.join( path_to_dataset, "Dataset/pth/{title}.pth" )
+            pth_file = os.path.join( path_to_dataset, f"Dataset/pth/{title}.pth" )
             tensor = load_mat_as_tensor( mat_file )
             torch.save( tensor, pth_file )
 
